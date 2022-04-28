@@ -1,5 +1,274 @@
 <!-- 
+    CSS字体 font：
+    取值
+    font：[ [font-style||font-variant||font-weight||font-stretch]?font-size[ /line-height]?font-family] | caption | icon | menu | message-box | small-caption | status-bar
 
-    CSS字体
-
+    font-style：指定文本字体样式
+    font-variant：指定文本是否为小型的大写字母
+    font-weight：指定文本字体的粗细
+    font-stretch：指定文本字体拉伸变形
+    font-size：指定文本字体尺寸
+    line-height：指定文本字体的行高
+    font-family：指定文本使用某个字体或字体序列
+    caption：使用有标题的系统控件的文本字体（如按钮，菜单等）（CSS2）
+    icon：使用图标标签的字体（CSS2）
+    menu：使用菜单的字体（CSS2）
+    message-box：使用信息对话框的文本字体（CSS2）
+    small-caption：使用小控件的字体（CSS2）
+    status-bar：使用窗口状态栏的字体（CSS2）
  -->
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>font_CSS</title>
+<style>
+.test p{border:1px solid #000;}
+li{margin: 15px 0;}
+pre{font: 20px Simsun;}
+h1{margin-top: 50px;}
+</style>
+</head>
+<body>
+<pre>
+    CSS字体 font：
+    取值 font：[ [font-style||font-variant||font-weight||font-stretch]?font-size[ /line-height]?font-family] | caption | icon | menu | message-box | small-caption | status-bar
+    
+    font-style：指定文本字体样式
+    font-variant：指定文本是否为小型的大写字母
+    font-weight：指定文本字体的粗细
+    font-stretch：指定文本字体拉伸变形
+    font-size：指定文本字体尺寸
+    line-height：指定文本字体的行高
+    font-family：指定文本使用某个字体或字体序列
+    caption：使用有标题的系统控件的文本字体（如按钮，菜单等）（CSS2）
+    icon：使用图标标签的字体（CSS2）
+    menu：使用菜单的字体（CSS2）
+    message-box：使用信息对话框的文本字体（CSS2）
+    small-caption：使用小控件的字体（CSS2）
+    status-bar：使用窗口状态栏的字体（CSS2）
+</pre>
+<h1>font字体样式</h2>
+<h2>简写属性。定义元素的文本特性。</h2>
+<h2>使用font属性参数必须按照如上的排列顺序，且font-size和font-family是不可忽略的。每个参数仅允许有一个值。忽略的将使用其参数对应的独立属性的默认值。</h2>
+<h2>对于如何使用客户端系统没有字体和自定义字体，可以参阅@font-face规则。对应的脚本特性为：font。</h2>
+<ul class="test">
+	<li>
+		<strong>只指定字体大小和字体：</strong>
+		<p style="font:18px Simsun,arial,sans-serif">本段文字将显示为18px宋体。</p>
+        <span>style属性：font:18px Simsun,arial,sans-serif</span>
+	</li>
+	<li>
+		<strong>只指定字体样式、大小和字体：</strong>
+		<p style="font:italic 18px Simsun,arial,sans-serif;">本段文字将显示为斜体的18px宋体。</p>
+        <span>style属性：font:italic 18px Simsun,arial,sans-serif</span>
+	</li>
+	<li>
+		<strong>只指定字体样式、小型大写字母、大小和字体：</strong>
+		<p style="font:italic small-caps 18px Simsun,arial,sans-serif;">本段文字将显示为斜体的带小型大写字母的18px宋体。大小型大写字母对比：AaBbCcDdEeFfGg</p>
+        <span>style属性：font:italic small-caps 18px Simsun,arial,sans-serif</span>
+	</li>
+	<li>
+		<strong>只指定字体样式、小型大写字母、粗细、大小和字体：</strong>
+		<p style="font:italic small-caps bold 18px Simsun,arial,sans-serif;">本段文字将显示为斜体的带小型大写字母的加粗18px宋体。</p>
+        <span>style属性：font:italic small-caps bold 18px Simsun,arial,sans-serif</span>
+	</li>
+	<li>
+		<strong>只指定字体样式、小型大写字母、粗细、大小、行高和字体：</strong>
+		<p style="font:italic small-caps bold 18px/2 Simsun,arial,sans-serif;">本段文字将显示为行高为2的斜体的带小型大写字母的加粗18px宋体。</p>
+        <span>style属性：font:italic small-caps bold 18px/2 Simsun,arial,sans-serif</span>
+	</li>
+	<li>
+		<strong>指定字体为caption：</strong>
+		<p style="font:caption;">本段文字将以caption的字体显示。</p>
+        <span>style属性：font:caption</span>
+	</li>
+	<li>
+		<strong>指定字体为icon：</strong>
+		<p style="font:icon;">本段文字将以icon的字体显示。</p>
+        <span>style属性：font:icon</span>
+	</li>
+	<li>
+		<strong>指定字体为menu：</strong>
+		<p style="font:menu;">本段文字将以menu的字体显示。</p>
+        <span>style属性：font:menu</span>
+	</li>
+	<li>
+		<strong>指定字体为message-box：</strong>
+		<p style="font:message-box;">本段文字将以message-box的字体显示。</p>
+        <span>style属性：font:message-box</span>
+	</li>
+	<li>
+		<strong>指定字体为small-caption：</strong>
+		<p style="font:small-caption;">本段文字将以small-caption的字体显示。</p>
+        <span>style属性：font:small-caption</span>
+	</li>
+	<li>
+		<strong>指定字体为status-bar：</strong>
+		<p style="font:status-bar;">本段文字将以status-bar的字体显示。</p>
+        <span>style属性：font:status-bar</span>
+	</li>
+</ul>
+
+
+<h1>font-style 指定元素的文本是否为斜体</h1>
+<pre>
+    取值：font-style：normal | italic | oblique
+
+    normal：指定文本字体样式为正常的字体
+    italic：指定文本字体样式为斜体。对于没有设计斜体的特殊字体，如果要使用斜体外观将应用oblique
+    oblique：指定文本字体样式为倾斜的字体。人为的使文字倾斜，而不是去选取字体中的斜体字
+</pre>
+<ul class="test">
+    <li>
+        <strong>正常的字体：</strong>
+        <p style="font-style: normal;">本段文字将显示为正常的字体</p>
+        <span>style属性：font-style: normal</span>
+    </li>
+    <li>
+        <strong>斜体</strong>
+        <p style="font-style: italic;">本段文字将显示为斜体</p>
+        <span>style属性：font-style: italic</span>
+    </li>
+    <li>
+        <strong>倾斜的字体</strong>
+        <p style="font-style: oblique;">本段文字将显示为倾斜的字体</p>
+        <span>style属性：font-style: oblique</span>
+    </li>
+</ul>
+
+
+<h1>font-variant 定义元素的文本是否为小型的大写字母</h1>
+<pre>
+    取值font-variant：normal | small-caps
+
+    normal：正常的字体
+    small-caps：小型的大写字母字体
+</pre>
+<ul class="test">
+	<li>
+		<strong>将文本转换为小型的大写字母</strong>
+		<div>原文how do you do</div>
+        <div style="font-variant: small-caps;">转换后how do you do.</div>
+        <span>style属性：font-variant: small-caps</span>
+	</li>
+</ul>
+
+<h1>font-weight 定义元素文本字体的粗细</h1>
+<pre>
+    取值font-weight：normal | bold | bolder | lighter | integer
+
+    normal：正常的字体。相当于数字值400
+    bold：粗体。相当于数字值700。
+    bolder：定义比继承值更重的值
+    lighter：定义比继承值更轻的值
+    [integer]：用数字表示文本字体粗细。取值范围：100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+</pre>
+<ul class="test">
+    <li>
+        <strong>正常的字体</strong>
+        <p style="font-weight: normal;">本段文字将显示为正常的字体</p>
+        <span>style属性：font-weight: normal 默认</span>
+    </li>
+    <li>
+        <strong>粗体</strong>
+        <p style="font-weight: bold;">本段文字将显示为粗体</p>
+        <span>style属性：font-weight: bold</span>
+    </li>
+    <li>
+        <strong>特粗体</strong>
+        <p style="font-weight: bolder;">本段文字将显示为特粗体</p>
+        <span>style属性：font-weight: bolder</span>
+    </li>
+    <li>
+        <strong>细体</strong>
+        <p style="font-weight:lighter">本段文字将显示为细体</p>
+        <span>style属性：font-weight:lighter</span>
+    </li>
+    <li>
+        <strong>用number值表示粗体</strong>
+        <p style="font-weight: 900;">本段文字将显示为用number值表示粗体</p>
+        <span>style属性：font-weight: 900</span>
+    </li>
+</ul>
+
+<h1>font-size 定义元素的字体大小</h1>
+<pre>
+    取值font-size：[absolute-size] | [relative-size] | [length] | [percentage]
+
+    [absolute-size] = xx-small | x-small | small | medium | large | x-large | xx-large
+    [relative-size] = smaller | larger
+
+    [absolute-size]：根据对象字号进行调节。以 medium 作为基础参照，xx-small相当于medium 3/5 (h6)，x-small: 3/4，small: 8/9 (h5)，medium: 1 (h4)，large: 6/5 (h3)，x-large: 3/2 (h2)，xx-large: 2/1 (h1)，
+    [relative-size]：相对于父对像中字号进行相对调节。使用成比例的em单位计算。
+    [length]：用长度值指定文字大小。不允许负值。
+    [percentage]：用百分比指定文字大小。其百分比取值是基于父对象中字体的尺寸。不允许负值。
+</pre>
+
+<ul class="test">
+    <li class="xx-small">
+		<strong>尺寸大小为xx-small：</strong>
+		<p style="font-size: xx-small;">xx-small尺寸的文字。</p>
+	</li>
+	<li class="x-small">
+		<strong>尺寸大小为x-small：</strong>
+		<p style="font-size: x-small;">x-small尺寸的文字。</p>
+	</li>
+	<li class="small">
+		<strong>尺寸大小为small：</strong>
+		<p style="font-size:small;">small尺寸的文字。</p>
+	</li>
+	<li class="medium">
+		<strong>尺寸大小为medium：</strong>
+		<p style="font-size: medium;">medium尺寸的文字。</p>
+	</li>
+	<li class="large">
+		<strong>尺寸大小为large：</strong>
+		<p style="font-size: large;">large尺寸的文字。</p>
+	</li>
+	<li class="x-large">
+		<strong>尺寸大小为x-large：</strong>
+		<p style="font-size: x-large;">x-large尺寸的文字。</p>
+	</li>
+	<li class="xx-large">
+		<strong>尺寸大小为xx-large：</strong>
+		<p style="font-size: xx-large;">xx-large尺寸的文字。</p>
+	</li>
+	<li class="samller">
+		<strong>尺寸大小为samller：</strong>
+		<p style="font-size: smaller;">samller尺寸的文字。</p>
+	</li>
+	<li class="larger">
+		<strong>尺寸大小为larger：</strong>
+		<p style="font-size: larger;">larger尺寸的文字。</p>
+	</li>
+	<li class="float">
+		<strong>尺寸大小为20px：</strong>
+		<p style="font-size: 20px;">20px尺寸的文字。</p>
+	</li>
+	<li class="percentage">
+		<strong>尺寸大小为20px：</strong>
+		<p>父对象20px尺寸的文字。<span>我的尺寸只是父对象的60%</span></p>
+        <span>
+            .percentage{font-size:20px;}
+            .percentage span{font-size:60%;}
+        </span>
+	</li>
+</ul>
+
+<h1>font-family 定义元素文本的字体名称序列</h1>
+<pre>
+    user agent会遍历定义的字体序列，直到匹配到某个字体为止
+    字体名称。按优先顺序排列。以逗号隔开。如果字体名称包含空格或中文，则应使用引号括起
+    font-family: helvetica, verdana, sans-serif
+</pre>
+
+<div style="font-family: arial, georgia, verdana, simsun, helvetica, sans-serif;">使用字体名称和字体序列名称定义字体。</div>
+<span>style属性：font-family: arial, georgia, verdana, simsun, helvetica, sans-serif;</span>
+
+</body>
+</html>
+<style>
+    .percentage{font-size:20px;}
+    .percentage span{font-size:60%;}
+</style>
