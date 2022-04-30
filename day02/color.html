@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8">
+    </header>
+    <body>
+        <div>
+            <style>
+                /* 指定每个 li 元素匹配的父元素中第 2 个子元素的背景色 */
+                li:nth-child(2) {
+                    color: #f60
+                }
+    
+                .red {
+                    color: red;
+                }
+    
+                #rgb {
+                    color: rgb(0,0,255);
+                }
+            </style>
+            <h3>color属性用于定义文本的颜色 取值方式有如下3种</h3>
+            <ol>
+                <!-- ol为有序列表 -->
+                <li class="red">预定义的颜色值 如red green blue等</li>
+                <li>十六进制 如#000000</li>
+                <li id="rgb">RGB代码 如rgb(0,0,0)</li>
+            </ol>
+        </div>
+
+        <div>
+            <style>
+                .textStyle{
+                    line-height: 25px;/*行间距*/
+                    text-align: center; /* 水平方式 */
+                    text-indent: 2em; /*首行缩进 建议用em作为单位*/
+                    /*em是字符宽度的倍数 2em就是2个字的宽度*/
+                }
+            </style>
+            <h3>行间距和首行缩进</h3>
+            <p class="textStyle">散文是美文,诗歌是美文,小说是美文,网文是美文,</p>
+            <p class="textStyle">这里的网文包括哪些用心灵慢慢熬制出来的鸡汤美文,短信美文,</p>
+            <p class="textStyle">有些短信写的也非常优美。</p>
+        </div>
+
+        <div>
+            <h3>字间距和单词间距</h3>
+            <style>
+                div .spacing {
+                    letter-spacing: 2px; /*字间距*/
+                }
+                p .spacing {
+                    word-spacing: 10px; /*单词间距*/
+                }
+            </style>
+            <div class="spacing">我是熊大</div>
+            <p class="spacing">my name is andy</p>
+        </div>
+
+        <div>
+            <style>
+                .alpha {
+                    color: rgba(0, 0, 0, 0.2); /*rgba(r,g,b,a) a是代表透明的意思 alpha */
+                }
+            </style>
+            <h3>文字颜色半透明</h3>
+            <h1 class="alpha">文字可以是半透明的</h1>
+        </div>
+
+        <div>
+            <style>
+                .test {
+                    font-size: 50px;
+                    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); /*水平位置 垂直位置 模糊距离 阴影颜色*/
+                }
+            </style>
+            <h3>文字阴影初识</h3>
+            <h1 class="test">这是带有阴影的文字</h1>
+        </div>
+
+    </body>
+</html>

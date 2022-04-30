@@ -2,9 +2,12 @@
 [https://xcclovebaby.github.io/css3-study](https://xcclovebaby.github.io/css3-study)
 
 ## 学习笔记目录
-[字体](./day01/font.html)
+[01.字体](./day01/font.html)
 <br>
-[选择器](./day01/selector.html)
+[02.字体外观](./day02/color.html) [案例](./day02/案例.html)
+<br>
+
+<br>
 
 ## 学习视频
 [视频地址：https://www.bilibili.com/video/BV1Bx411u7cS](https://www.bilibili.com/video/BV1Bx411u7cS)
